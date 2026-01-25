@@ -1,3 +1,4 @@
+/* ---------- RESET ---------- */
 * {
   box-sizing: border-box;
 }
@@ -12,7 +13,7 @@ body {
   overflow-x: hidden;
 }
 
-/* HERO */
+/* ---------- HERO (UNCHANGED) ---------- */
 .hero {
   max-width: 1200px;
   margin: 120px auto 90px;
@@ -47,6 +48,7 @@ body {
   font-weight: 600;
   letter-spacing: -0.6px;
   margin-bottom: 10px;
+  color: #0f172a;
 }
 
 .role {
@@ -62,7 +64,7 @@ body {
   color: #334155;
 }
 
-/* SECTIONS */
+/* ---------- SECTIONS ---------- */
 .section {
   max-width: 1200px;
   margin: 120px auto;
@@ -89,7 +91,7 @@ body {
   border-radius: 2px;
 }
 
-/* EXPERIENCE */
+/* ---------- EXPERIENCE ---------- */
 .card {
   background: #ffffff;
   padding: 40px;
@@ -106,9 +108,19 @@ body {
 .meta {
   font-size: 14px;
   color: #64748b;
+  margin-top: 6px;
 }
 
-/* SKILLS */
+.card ul {
+  margin-top: 22px;
+  padding-left: 20px;
+}
+
+.card li {
+  margin-bottom: 10px;
+}
+
+/* ---------- SKILLS ---------- */
 .skills {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -116,6 +128,7 @@ body {
 }
 
 .skills div {
+  background: #ffffff;
   padding: 26px;
   border-radius: 22px;
   border: 1px solid #e5e7eb;
@@ -128,51 +141,95 @@ body {
 }
 
 .skills strong {
+  font-size: 15px;
   color: #0ea5a4;
+  display: block;
+  margin-bottom: 8px;
 }
 
-/* PROJECTS */
+/* ---------- PROJECTS ---------- */
 .project {
+  background: #ffffff;
   padding: 36px;
   border-radius: 26px;
   margin-bottom: 44px;
   border: 1px solid #e5e7eb;
-}
-
-/* CONTACT (GREENISH & CUTE) */
-.contact {
-  max-width: 1200px;
-  margin: 130px auto 110px;
-  padding: 0 36px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-}
-
-.contact a {
-  padding: 24px;
-  border-radius: 26px;
-  background: linear-gradient(180deg, #ffffff, #f0fdfa);
-  border: 1px solid #d1fae5;
-  text-decoration: none;
-  color: #059669;
-  font-weight: 600;
-  text-align: center;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.contact a i {
+.project:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 44px rgba(0,0,0,0.08);
+}
+
+.project h3 {
   font-size: 22px;
-  margin-bottom: 6px;
+  margin-bottom: 12px;
+}
+
+.tech {
+  font-size: 14px;
+  color: #475569;
+}
+
+/* ---------- CONTACT (CLEAR GREENISH + ANIMATED) ---------- */
+.contact {
+  max-width: 1200px;
+  margin: 130px auto 110px;
+  padding: 40px 36px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+
+  /* CLEAR greenish background */
+  background: linear-gradient(
+    135deg,
+    #ecfdf5,
+    #f0fdfa,
+    #ffffff
+  );
+  border-radius: 36px;
+  border: 1px solid #bbf7d0;
+}
+
+/* contact cards */
+.contact a {
+  padding: 28px;
+  border-radius: 28px;
+  background: #ffffff;
+  border: 1px solid #bbf7d0;
+  text-decoration: none;
+  color: #047857;
+  font-weight: 600;
+  text-align: center;
+
+  box-shadow: 0 20px 40px rgba(16,185,129,0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* icons */
+.contact a i {
+  font-size: 26px;
+  margin-bottom: 8px;
+  display: inline-block;
   color: #10b981;
+  animation: iconFloat 4s ease-in-out infinite;
 }
 
+/* hover */
 .contact a:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 22px 50px rgba(16, 185, 129, 0.18);
+  transform: translateY(-12px);
+  box-shadow: 0 32px 70px rgba(16,185,129,0.25);
 }
 
-/* SCROLL */
+/* floating icon animation */
+@keyframes iconFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* ---------- SCROLL ---------- */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -184,13 +241,24 @@ body {
   transform: translateY(0);
 }
 
-/* RESPONSIVE */
+/* ---------- RESPONSIVE ---------- */
 @media (max-width: 900px) {
-  .skills { grid-template-columns: 1fr 1fr; }
+  .skills {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 600px) {
-  .hero h1 { font-size: 34px; }
-  .skills { grid-template-columns: 1fr; }
-  .contact { grid-template-columns: 1fr; }
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .skills {
+    grid-template-columns: 1fr;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+    padding: 28px;
+  }
 }
