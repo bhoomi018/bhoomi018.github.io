@@ -13,7 +13,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ---------- HERO (UNCHANGED) ---------- */
+/* ---------- HERO (ONLY SKY BLUE, NO GREEN) ---------- */
 .hero {
   max-width: 1200px;
   margin: 120px auto 90px;
@@ -21,6 +21,7 @@ body {
   position: relative;
 }
 
+/* sky blue light */
 .hero::before {
   content: "";
   position: absolute;
@@ -32,16 +33,7 @@ body {
   z-index: -1;
 }
 
-.hero::after {
-  content: "";
-  position: absolute;
-  bottom: -80px;
-  right: -80px;
-  width: 280px;
-  height: 280px;
-  background: radial-gradient(circle, #dcfce7, transparent 70%);
-  z-index: -1;
-}
+/* ❌ green light removed intentionally */
 
 .hero h1 {
   font-size: 52px;
@@ -54,7 +46,7 @@ body {
 .role {
   font-size: 17px;
   font-weight: 500;
-  color: #0ea5a4;
+  color: #0ea5a4; /* teal */
   margin-bottom: 22px;
 }
 
@@ -87,7 +79,7 @@ body {
   content: "";
   width: 64px;
   height: 3px;
-  background: #0ea5a4;
+  background: #0ea5a4; /* teal */
   border-radius: 2px;
 }
 
@@ -108,7 +100,6 @@ body {
 .meta {
   font-size: 14px;
   color: #64748b;
-  margin-top: 6px;
 }
 
 .card ul {
@@ -142,7 +133,7 @@ body {
 
 .skills strong {
   font-size: 15px;
-  color: #0ea5a4;
+  color: #0ea5a4; /* teal */
   display: block;
   margin-bottom: 8px;
 }
@@ -172,61 +163,55 @@ body {
   color: #475569;
 }
 
-/* ---------- CONTACT (CLEAR GREENISH + ANIMATED) ---------- */
+/* ---------- CONTACT (NO OUTER BORDER, SKY BLUE INSIDE, TEAL TEXT) ---------- */
 .contact {
   max-width: 1200px;
   margin: 130px auto 110px;
-  padding: 40px 36px;
+  padding: 0 36px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 36px;
-
-  /* CLEAR greenish background */
-  background: linear-gradient(
-    135deg,
-    #ecfdf5,
-    #f0fdfa,
-    #ffffff
-  );
-  border-radius: 36px;
-  border: 1px solid #bbf7d0;
+  gap: 32px;
 }
 
-/* contact cards */
+/* contact items */
 .contact a {
-  padding: 28px;
-  border-radius: 28px;
-  background: #ffffff;
-  border: 1px solid #bbf7d0;
+  padding: 26px;
+  border-radius: 26px;
+
+  /* sky blue soft background */
+  background: linear-gradient(180deg, #f0f9ff, #ffffff);
+
+  /* ❌ no border */
+  border: none;
+
   text-decoration: none;
-  color: #047857;
+  color: #0ea5a4; /* SAME teal */
   font-weight: 600;
   text-align: center;
 
-  box-shadow: 0 20px 40px rgba(16,185,129,0.15);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 16px 36px rgba(56, 189, 248, 0.25);
+  transition: transform 0.35s ease, box-shadow 0.35s ease,
+              background 0.35s ease;
 }
 
 /* icons */
 .contact a i {
-  font-size: 26px;
+  font-size: 24px;
   margin-bottom: 8px;
   display: inline-block;
-  color: #10b981;
-  animation: iconFloat 4s ease-in-out infinite;
+  color: #0ea5a4; /* teal */
+  transition: transform 0.35s ease;
 }
 
 /* hover */
 .contact a:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 32px 70px rgba(16,185,129,0.25);
+  transform: translateY(-8px);
+  background: linear-gradient(180deg, #e0f2fe, #ffffff);
+  box-shadow: 0 28px 60px rgba(56, 189, 248, 0.35);
 }
 
-/* floating icon animation */
-@keyframes iconFloat {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-  100% { transform: translateY(0); }
+.contact a:hover i {
+  transform: scale(1.15);
 }
 
 /* ---------- SCROLL ---------- */
@@ -259,6 +244,10 @@ body {
 
   .contact {
     grid-template-columns: 1fr;
-    padding: 28px;
+  }
+
+  .section {
+    padding: 56px 24px;
+    border-radius: 22px;
   }
 }
