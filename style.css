@@ -1,20 +1,21 @@
 body {
   margin: 0;
   font-family: "Segoe UI", Roboto, sans-serif;
-  background: #0f172a;
+  background: #0b1120;
   color: #e5e7eb;
 }
 
+/* HERO */
 .hero {
-  padding: 100px 20px;
+  padding: 110px 20px;
   text-align: center;
   background: linear-gradient(135deg, #6366f1, #22d3ee);
   color: #020617;
 }
 
 .hero h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
+  font-size: 52px;
+  margin-bottom: 12px;
 }
 
 .hero-sub {
@@ -23,14 +24,15 @@ body {
 }
 
 .hero-desc {
-  max-width: 600px;
+  max-width: 650px;
   margin: 20px auto 0;
   font-size: 16px;
 }
 
+/* SECTIONS */
 .section {
-  max-width: 900px;
-  margin: 60px auto;
+  max-width: 950px;
+  margin: 70px auto;
   padding: 0 20px;
 }
 
@@ -43,22 +45,28 @@ body {
 .tags span {
   display: inline-block;
   background: #1e293b;
-  padding: 8px 14px;
+  padding: 10px 16px;
   border-radius: 20px;
   margin: 6px;
   font-size: 14px;
 }
 
+/* CARDS */
 .card {
   background: #020617;
   border: 1px solid #1e293b;
-  border-radius: 12px;
-  padding: 20px;
+  border-radius: 14px;
+  padding: 22px;
   margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(56,189,248,0.15);
 }
 
 .card h3 {
-  margin-top: 0;
   color: #38bdf8;
 }
 
@@ -67,7 +75,33 @@ body {
   font-size: 14px;
 }
 
+/* CONTACT */
 .contact {
   text-align: center;
-  padding-bottom: 80px;
+  padding-bottom: 90px;
+}
+
+/* ANIMATIONS */
+.fade-in {
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.slide-up {
+  animation: slideUp 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
