@@ -10,5 +10,5 @@ The portfolio highlights:
 
 The website is built using simple HTML and CSS and is hosted using GitHub Pages.
 
-🔗 Live Portfolio: https://bhoomi-chauhan.github.io
+🔗 Live Portfolio: https://bhoomi018.github.io
 
