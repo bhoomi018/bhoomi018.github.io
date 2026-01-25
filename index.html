@@ -14,148 +14,123 @@
 
 <body>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Bhoomi Chauhan</h1>
-      <p class="hero-role">Software Engineer · Backend-Focused · 2+ Years Experience</p>
-      <p class="hero-summary">
-        Backend-focused software engineer with experience building
-        production-grade APIs, cloud-based services, and automation-driven systems.
-        I work primarily with Node.js, databases, and AWS, and have hands-on
-        experience delivering reliable systems used in real-world environments.
-      </p>
-    </div>
-  </header>
+<!-- HERO -->
+<section class="hero reveal">
+  <h1>Bhoomi Chauhan</h1>
+  <p class="role">Software Engineer · Backend Focused · 2 Years</p>
+  <p class="summary">
+    Backend-focused software engineer with experience building
+    production-grade APIs, cloud services, and automation-driven systems.
+  </p>
+</section>
 
-  <!-- ABOUT -->
-  <section class="section">
-    <h2>About</h2>
+<!-- ABOUT -->
+<section class="section reveal">
+  <h2>About</h2>
+  <p>
+    I am a backend-focused software engineer with over two years of professional
+    experience working on real-world systems. My work centers around designing
+    RESTful APIs, building secure authentication flows, integrating third-party
+    services, and maintaining reliability in production environments.
+  </p>
+  <p>
+    I have contributed to verification, onboarding, and payment-related platforms,
+    working closely with cross-functional teams to deliver scalable and maintainable
+    backend solutions.
+  </p>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section reveal">
+  <h2>Experience</h2>
+
+  <div class="card">
+    <h3>Software Development Engineer</h3>
+    <span class="meta">DataFlow Group · July 2023 – July 2025</span>
+    <ul>
+      <li>Developed and maintained backend systems for verification platforms.</li>
+      <li>Designed secure and scalable REST APIs for document processing and payments.</li>
+      <li>Implemented OAuth 2.0 and JWT-based authentication and authorization.</li>
+      <li>Worked with distributed architectures and improved backend reliability.</li>
+      <li>Deployed and supported services on AWS in production environments.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section reveal">
+  <h2>Technical Skills</h2>
+
+  <div class="skills">
+    <div><strong>Languages</strong><span>JavaScript, TypeScript</span></div>
+    <div><strong>Backend</strong><span>Node.js, Express.js, NestJS, REST APIs</span></div>
+    <div><strong>Frontend</strong><span>React.js, Next.js</span></div>
+    <div><strong>Databases</strong><span>MongoDB, PostgreSQL</span></div>
+    <div><strong>Cloud & Infra</strong><span>AWS (Lambda, S3, API Gateway, IAM, CloudWatch)</span></div>
+    <div><strong>Security & Reliability</strong><span>OAuth 2.0, JWT, Redis</span></div>
+    <div><strong>Automation & Integration</strong>
+      <span>Webhooks, n8n Workflow Automation, Agentic AI–based backend workflows</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section reveal">
+  <h2>Projects</h2>
+
+  <div class="project">
+    <h3>API Sentinel</h3>
     <p>
-      I am a backend-focused software engineer with over two years of professional
-      experience working on scalable backend systems. My work involves designing
-      RESTful APIs, building secure authentication flows, integrating third-party
-      services, and ensuring system reliability in production environments.
+      Designed and built a backend reliability system to monitor APIs and
+      handle transient failures. Implemented retry strategies, circuit breakers,
+      timeouts, and caching to improve service availability.
     </p>
+    <span class="tech">Node.js · Express · Redis · Docker</span>
+  </div>
+
+  <div class="project">
+    <h3>Distributed Truth Resolver Dashboard</h3>
     <p>
-      I have worked closely with cross-functional teams on verification,
-      onboarding, and payment-related platforms, contributing to backend
-      architecture, automation workflows, and cloud deployments.
-      I value clean code, clear system design, and building solutions
-      that scale gracefully.
+      Built a backend-driven system to resolve conflicting data across
+      distributed services. Implemented secure APIs, automation workflows,
+      and a React-based dashboard for monitoring resolution states.
     </p>
-  </section>
+    <span class="tech">Node.js · Express . MongoDB · React · OAuth 2.0 · n8n . Docker</span>
+  </div>
+</section>
 
-  <!-- SKILLS -->
-  <section class="section">
-    <h2>Technical Skills</h2>
+<!-- EDUCATION -->
+<section class="section reveal">
+  <h2>Education</h2>
+    <p>
+    <strong>Bachelor of Technology (B.Tech)</strong> — Computer Science & Engineering<br>
+    Uttaranchal University · 2019 – 2023
+    </p>
+</section>
 
-    <div class="skills-grid">
-      <div>
-        <h3>Languages</h3>
-        <p>JavaScript, TypeScript</p>
-      </div>
+<!-- CONTACT -->
+<section class="contact reveal">
+  <a href="mailto:bhoomichauhan333@gmail.com">
+    <i class="fa-solid fa-envelope"></i> Email
+  </a>
+  <a href="https://github.com/bhoomi018" target="_blank">
+    <i class="fa-brands fa-github"></i> GitHub
+  </a>
+  <a href="https://linkedin.com/in/bhoomi-chauhan-b926842" target="_blank">
+    <i class="fa-brands fa-linkedin"></i> LinkedIn
+  </a>
+</section>
 
-      <div>
-        <h3>Backend</h3>
-        <p>Node.js, Express.js, NestJS, REST APIs</p>
-      </div>
+<script>
+  const reveals = document.querySelectorAll(".reveal");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add("active");
+    });
+  }, { threshold: 0.15 });
 
-      <div>
-        <h3>Frontend</h3>
-        <p>React.js, Next.js, HTML, CSS</p>
-      </div>
-
-      <div>
-        <h3>Databases</h3>
-        <p>MongoDB, PostgreSQL</p>
-      </div>
-
-      <div>
-        <h3>Cloud & Infrastructure</h3>
-        <p>AWS (Lambda, S3, API Gateway, IAM, CloudWatch, Cognito, Secret Manager)</p>
-      </div>
-
-      <div>
-        <h3>Security & Reliability</h3>
-        <p>OAuth 2.0, JWT, Redis, Error Handling, API Reliability</p>
-      </div>
-
-      <div>
-        <h3>Automation & Integration</h3>
-        <p>Webhooks, n8n Workflow Automation, Agentic AI–based backend workflows</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="section">
-    <h2>Selected Projects</h2>
-
-    <div class="project">
-      <h3>API Sentinel</h3>
-      <p class="project-desc">
-        Designed and developed a backend reliability system to monitor
-        external and internal APIs in production. The system handles
-        transient failures using retry strategies, circuit breakers,
-        timeout management, and caching to prevent cascading failures
-        and improve overall service availability.
-      </p>
-      <p class="project-tech">
-        <strong>Tech:</strong> Node.js, Express, Redis, MongoDB, Docker
-      </p>
-    </div>
-
-    <div class="project">
-      <h3>Distributed Truth Resolver Dashboard</h3>
-      <p class="project-desc">
-        Built a backend-driven platform to resolve conflicting data updates
-        across distributed systems. Implemented secure authentication,
-        backend APIs, and automation workflows to ensure data consistency.
-        Developed a React-based dashboard to visualize resolution status
-        and system state.
-      </p>
-      <p class="project-tech">
-        <strong>Tech:</strong> Node.js, MongoDB, React.js, OAuth 2.0, n8n, Docker
-      </p>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section class="section">
-    <h2>Experience</h2>
-
-    <div class="experience">
-      <h3>Software Development Engineer</h3>
-      <p class="experience-meta">
-        DataFlow Group · July 2023 – July 2025
-      </p>
-      <ul>
-        <li>Developed and maintained backend systems for verification and onboarding platforms.</li>
-        <li>Designed secure and scalable REST APIs for document processing, payments, and reconciliation.</li>
-        <li>Implemented OAuth 2.0 and JWT-based authentication and authorization flows.</li>
-        <li>Worked with distributed architectures, improving backend reliability and observability.</li>
-        <li>Deployed and supported backend services on AWS, handling production issues and system upgrades.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="section contact">
-    <h2>Contact</h2>
-
-    <div class="contact-links">
-      <a href="mailto:bhoomichauhan333@gmail.com">
-        <i class="fa-solid fa-envelope"></i> Email
-      </a>
-      <a href="https://github.com/bhoomi018" target="_blank">
-        <i class="fa-brands fa-github"></i> GitHub
-      </a>
-      <a href="https://linkedin.com/in/bhoomi-chauhan-b926842" target="_blank">
-        <i class="fa-brands fa-linkedin"></i> LinkedIn
-      </a>
-    </div>
-  </section>
+  reveals.forEach(r => observer.observe(r));
+</script>
 
 </body>
 </html>
