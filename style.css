@@ -64,7 +64,7 @@ body {
 .section h2 {
   font-size: 30px;
   font-weight: 700;
-  margin-bottom: 36px;
+  margin-bottom: 22px;
   display: flex;
   align-items: center;
   gap: 14px;
@@ -84,7 +84,7 @@ body {
   color: #475569;
 }
 
-/* EXPERIENCE */
+/* EXPERIENCE / CARD */
 .card {
   background: #ffffff;
   padding: 40px;
@@ -158,36 +158,44 @@ body {
   text-decoration: underline;
 }
 
-/* CONTACT */
-.contact {
-  max-width: 1200px;
-  margin: 130px auto 110px;
-  padding: 0 36px;
+/* CONTACT – ICON STYLE (UPDATED) */
+.contact-subtext {
+  max-width: 720px;
+  margin: 0 auto 44px;
+  text-align: center;
+  font-size: 16px;
+  color: #475569;
+}
+
+.contact-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
 }
 
-.contact a {
-  padding: 26px;
+.contact-icon-card {
+  padding: 34px;
   border-radius: 26px;
   background: linear-gradient(180deg, #f0f9ff, #ffffff);
-  border: none;
   text-decoration: none;
+  text-align: center;
   color: #0ea5a4;
   font-weight: 600;
-  text-align: center;
   box-shadow: 0 16px 36px rgba(56,189,248,0.25);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.contact a i {
-  font-size: 24px;
-  margin-bottom: 8px;
-  color: #0ea5a4;
+.contact-icon-card i {
+  font-size: 32px;
+  display: block;
+  margin-bottom: 14px;
 }
 
-.contact a:hover {
+.contact-icon-card span {
+  font-size: 18px;
+}
+
+.contact-icon-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 28px 60px rgba(56,189,248,0.35);
 }
@@ -207,10 +215,11 @@ body {
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .skills { grid-template-columns: 1fr 1fr; }
+  .contact-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 600px) {
   .hero h1 { font-size: 34px; }
   .skills { grid-template-columns: 1fr; }
-  .contact { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
 }
