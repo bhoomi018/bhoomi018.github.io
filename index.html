@@ -14,7 +14,10 @@
 </head>
 
 <body>
-<div class="gradient-bg"></div> 
+
+<!-- BACKGROUND -->
+<div class="gradient-bg"></div>
+
 <!-- HERO -->
 <section class="hero reveal">
   <h1>Bhoomi Chauhan</h1>
@@ -118,9 +121,7 @@
     <span class="tech">
       Node.js · Express.js · Redis · TypeScript
     </span><br />
-    <a class="project-link"
-       href="https://github.com/bhoomi018/api-sentinel"
-       target="_blank">
+    <a class="project-link" href="https://github.com/bhoomi018/api-sentinel" target="_blank">
       View on GitHub →
     </a>
   </div>
@@ -137,9 +138,7 @@
     <span class="tech">
       React · Node.js · TypeScript · MongoDB · Redis · JWT
     </span><br />
-    <a class="project-link"
-       href="https://github.com/bhoomi018/meditrack"
-       target="_blank">
+    <a class="project-link" href="https://github.com/bhoomi018/meditrack" target="_blank">
       View on GitHub →
     </a>
   </div>
@@ -156,9 +155,7 @@
     <span class="tech">
       Node.js · TypeScript · Bull · Redis · PostgreSQL · WebSocket
     </span><br />
-    <a class="project-link"
-       href="https://github.com/bhoomi018/Notiq-Multi-channel-Notification-Service"
-       target="_blank">
+    <a class="project-link" href="https://github.com/bhoomi018/Notiq-Multi-channel-Notification-Service" target="_blank">
       View on GitHub →
     </a>
   </div>
@@ -175,50 +172,12 @@
     <span class="tech">
       Node.js · React · MongoDB · n8n · OAuth 2.0
     </span><br />
-    <a class="project-link"
-       href="https://github.com/bhoomi018/Distributed-Truth-Resolver-Dashboard"
-       target="_blank">
+    <a class="project-link" href="https://github.com/bhoomi018/Distributed-Truth-Resolver-Dashboard" target="_blank">
       View on GitHub →
     </a>
   </div>
 
 </section>
-
-<!-- CONTACT -->
-<section class="section reveal">
-  <h2><i class="fa-solid fa-envelope"></i> Contact</h2>
-
-  <div class="contact-grid">
-    <a href="mailto:bhoomichauhan333@gmail.com" class="contact-icon-card">
-      <i class="fa-solid fa-envelope"></i>
-      <span>Email</span>
-    </a>
-
-    <a href="https://github.com/bhoomi018" target="_blank" class="contact-icon-card">
-      <i class="fa-brands fa-github"></i>
-      <span>GitHub</span>
-    </a>
-
-    <a href="https://www.linkedin.com/in/bhoomi-chauhan-b92884224/" target="_blank" class="contact-icon-card">
-      <i class="fa-brands fa-linkedin"></i>
-      <span>LinkedIn</span>
-    </a>
-  </div>
-</section>
-
-<script>
-  const items = document.querySelectorAll(".reveal");
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach((entry, index) => {
-      if (entry.isIntersecting) {
-        entry.target.style.transitionDelay = `${index * 80}ms`;
-        entry.target.classList.add("active");
-      }
-    });
-  }, { threshold: 0.15 });
-
-  items.forEach(el => observer.observe(el));
-</script>
 
 </body>
 </html>
