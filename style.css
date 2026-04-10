@@ -14,63 +14,65 @@ body {
 /* HERO */
 .hero {
   max-width: 1100px;
-  margin: 100px auto 70px;
+  margin: 90px auto 60px;
   padding: 0 24px;
 }
 
 .hero h1 {
   font-size: 48px;
   font-weight: 700;
+  margin-bottom: 8px;
 }
 
 .role {
   font-size: 16px;
   color: #0ea5a4;
-  margin-top: 8px;
+  margin-bottom: 14px;
 }
 
 .summary {
   max-width: 700px;
+  font-size: 16px;
   color: #475569;
 }
 
 /* SECTION */
 .section {
   max-width: 1100px;
-  margin: 70px auto;
-  padding: 50px 30px;
+  margin: 60px auto;
+  padding: 45px 30px;
   background: #ffffff;
   border-radius: 18px;
   border: 1px solid #e5e7eb;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
 .section h2 {
-  font-size: 26px;
-  margin-bottom: 20px;
+  font-size: 24px;
+  margin-bottom: 16px;
 }
 
 /* CARD */
 .card {
-  padding: 28px;
-  border-radius: 16px;
+  padding: 25px;
+  border-radius: 14px;
   border: 1px solid #e5e7eb;
-  background: white;
+  background: #ffffff;
 }
 
 /* PROJECT */
 .project {
-  padding: 26px;
-  border-radius: 16px;
-  margin-bottom: 26px;
+  padding: 22px;
+  border-radius: 14px;
+  margin-bottom: 20px;
   border: 1px solid #e5e7eb;
-  background: white;
-  transition: all 0.3s ease;
+  background: #ffffff;
+  transition: all 0.25s ease;
 }
 
 .project:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 35px rgba(0,0,0,0.08);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
 }
 
 .tech {
@@ -80,7 +82,7 @@ body {
 
 .project-link {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 8px;
   color: #0ea5a4;
   font-weight: 600;
   text-decoration: none;
@@ -94,43 +96,50 @@ body {
 .skills {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 16px;
 }
 
 .skills div {
-  padding: 20px;
-  border-radius: 14px;
+  padding: 16px;
+  border-radius: 12px;
   border: 1px solid #e5e7eb;
-  background: white;
+  background: #ffffff;
 }
 
 /* CONTACT */
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 18px;
+  margin-top: 20px;
 }
 
 .contact-icon-card {
-  padding: 24px;
+  padding: 20px;
   text-align: center;
-  border-radius: 16px;
+  border-radius: 14px;
   background: #f0f9ff;
   color: #0ea5a4;
   text-decoration: none;
-  transition: all 0.3s ease;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.contact-icon-card i {
+  font-size: 22px;
+  margin-bottom: 6px;
 }
 
 .contact-icon-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(56,189,248,0.25);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(56,189,248,0.2);
 }
 
 /* ANIMATION */
 .reveal {
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
+  transform: translateY(25px);
+  transition: all 0.6s ease;
 }
 
 .reveal.active {
@@ -141,7 +150,7 @@ body {
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 34px;
+    font-size: 32px;
   }
 
   .skills {
@@ -153,6 +162,6 @@ body {
   }
 
   .section {
-    padding: 35px 20px;
+    padding: 30px 20px;
   }
 }
