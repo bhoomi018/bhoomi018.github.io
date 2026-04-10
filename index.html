@@ -1,90 +1,224 @@
-* {
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bhoomi Chauhan | Software Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-body {
-  margin: 0;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont,
-               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background: linear-gradient(180deg, #f8fafc, #eef7ff);
-  color: #0f172a;
-  line-height: 1.7;
-}
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
 
-/* HERO */
-.hero {
-  max-width: 1100px;
-  margin: 100px auto 60px;
-  padding: 0 24px;
-}
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-.hero h1 {
-  font-size: 48px;
-  font-weight: 700;
-}
+<body>
 
-.role {
-  color: #0ea5a4;
-}
+<!-- HERO -->
+<section class="hero reveal">
+  <h1>Bhoomi Chauhan</h1>
+  <p class="role">Software Engineer · Backend & Full-Stack Systems</p>
+  <p class="summary">
+    Software Engineer with ~2 years of experience building scalable backend systems,
+    APIs, and real-time applications. Skilled in Node.js, MongoDB, PostgreSQL, and Redis.
+    Experienced in designing distributed systems and automation workflows.
+    Also proficient in React for building responsive user interfaces.
+  </p>
+</section>
 
-/* SECTION */
-.section {
-  max-width: 1100px;
-  margin: 80px auto;
-  padding: 50px 28px;
-  background: rgba(255,255,255,0.7);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  border: 1px solid #e2e8f0;
-}
+<!-- ABOUT -->
+<section class="section reveal">
+  <h2><i class="fa-solid fa-user"></i> About</h2>
 
-/* PROJECT */
-.project {
-  padding: 26px;
-  border-radius: 16px;
-  margin-bottom: 28px;
-  border: 1px solid #e2e8f0;
-  background: white;
-  transition: 0.3s;
-}
+  <p>
+    Software Engineer with hands-on experience in building scalable backend systems
+    and full-stack applications. I work on API design, microservices architecture,
+    and real-time systems used in production environments.
+  </p>
 
-.project:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 35px rgba(0,0,0,0.08);
-}
+  <p>
+    My experience includes verification platforms, distributed systems, webhook-based
+    automation, and third-party integrations. I focus on performance optimization,
+    system reliability, and clean architecture.
+  </p>
 
-/* SKILLS */
-.skills {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-}
+  <p class="looking-for">
+    Currently seeking Software Engineer roles focused on backend systems,
+    distributed architecture, and scalable product development.
+  </p>
+</section>
 
-.skills div {
-  padding: 18px;
-  border-radius: 14px;
-  border: 1px solid #e2e8f0;
-}
+<!-- EXPERIENCE -->
+<section class="section reveal">
+  <h2><i class="fa-solid fa-briefcase"></i> Experience</h2>
 
-/* CONTACT */
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
+  <div class="card">
+    <h3>Software Development Engineer</h3>
+    <span class="meta">The DataFlow Group · July 2023 – July 2025</span>
 
-.contact-icon-card {
-  padding: 22px;
-  text-align: center;
-  border-radius: 14px;
-  background: #f0f9ff;
-  color: #0ea5a4;
-  text-decoration: none;
-}
+    <ul>
+      <li>
+        Engineered <strong>40+ secure REST APIs</strong> for applicant onboarding,
+        document verification, payments, reconciliation, and webhook integrations
+        on a high-volume production platform (CCP3).
+      </li>
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .hero h1 { font-size: 34px; }
-  .skills { grid-template-columns: 1fr; }
-  .contact-grid { grid-template-columns: 1fr; }
-}
+      <li>
+        Architected and delivered the <strong>Trusted Affiliate Portal</strong> end-to-end —
+        designed the React-based UI, built backend APIs, and deployed on AWS from scratch.
+      </li>
+
+      <li>
+        Managed full <strong>AWS stack</strong> (Lambda, API Gateway, Cognito, S3,
+        CloudWatch, IAM, Secrets Manager); performed Node.js and Lambda runtime upgrades
+        with zero-downtime deployments.
+      </li>
+
+      <li>
+        Handled <strong>production incidents and root cause analysis</strong>; maintained
+        high uptime using CloudWatch monitoring across distributed microservices.
+      </li>
+
+      <li>
+        Mentored junior engineers via code reviews and pair programming; established
+        <strong>engineering best practices</strong> across the team.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section reveal">
+  <h2><i class="fa-solid fa-code"></i> Technical Skills</h2>
+
+  <div class="skills">
+    <div><strong>Programming & Backend:</strong> JavaScript, TypeScript, Node.js, Express.js, NestJS, REST APIs</div>
+    <div><strong>Frontend:</strong> React.js, HTML, CSS</div>
+    <div><strong>Databases:</strong> MongoDB, PostgreSQL</div>
+    <div><strong>Caching & Queues:</strong> Redis, Bull</div>
+    <div><strong>Cloud:</strong> AWS (Lambda, API Gateway, Cognito, S3, CloudWatch, IAM)</div>
+    <div><strong>Security & Automation:</strong> OAuth 2.0, JWT, Webhooks, n8n</div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section reveal">
+  <h2><i class="fa-solid fa-diagram-project"></i> Projects</h2>
+
+  <div class="project">
+    <h3>API Sentinel — Intelligent API Reliability System</h3>
+    <p>
+      Built an AI-assisted reliability layer that dynamically tunes retry intervals,
+      cooldown windows, and circuit-breaker thresholds based on real-time failure patterns.
+    </p>
+    <p class="project-impact">
+      Focus: Backend reliability, intelligent retry systems, fault tolerance.
+    </p>
+    <span class="tech">
+      Node.js · Express.js · Redis · TypeScript
+    </span><br />
+    <a class="project-link"
+       href="https://github.com/bhoomi018/api-sentinel"
+       target="_blank">
+      View on GitHub →
+    </a>
+  </div>
+
+  <div class="project">
+    <h3>MediTrack — Medical Inventory Management System</h3>
+    <p>
+      Built a full-stack MERN application for hospital/pharmacy inventory management
+      with role-based access control, real-time stock alerts, and expiry tracking.
+    </p>
+    <p class="project-impact">
+      Focus: Full-stack systems, real-time alerts, performance optimization.
+    </p>
+    <span class="tech">
+      React · Node.js · TypeScript · MongoDB · Redis · JWT
+    </span><br />
+    <a class="project-link"
+       href="https://github.com/bhoomi018/meditrack"
+       target="_blank">
+      View on GitHub →
+    </a>
+  </div>
+
+  <div class="project">
+    <h3>Notiq — Multi-channel Notification Service</h3>
+    <p>
+      Built an async notification system supporting email, in-app, and webhook delivery
+      with queue-based architecture, retries, and real-time updates.
+    </p>
+    <p class="project-impact">
+      Focus: Backend systems, queues, real-time communication.
+    </p>
+    <span class="tech">
+      Node.js · TypeScript · Bull · Redis · PostgreSQL · WebSocket
+    </span><br />
+    <a class="project-link"
+       href="https://github.com/bhoomi018/Notiq-Multi-channel-Notification-Service"
+       target="_blank">
+      View on GitHub →
+    </a>
+  </div>
+
+  <div class="project">
+    <h3>Distributed Truth Resolver Dashboard</h3>
+    <p>
+      Built a system to resolve conflicting data across distributed services,
+      ensuring eventual consistency with real-time monitoring.
+    </p>
+    <p class="project-impact">
+      Focus: Distributed systems, consistency, automation.
+    </p>
+    <span class="tech">
+      Node.js · React · MongoDB · n8n · OAuth 2.0
+    </span><br />
+    <a class="project-link"
+       href="https://github.com/bhoomi018/Distributed-Truth-Resolver-Dashboard"
+       target="_blank">
+      View on GitHub →
+    </a>
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="section reveal">
+  <h2><i class="fa-solid fa-envelope"></i> Contact</h2>
+
+  <div class="contact-grid">
+    <a href="mailto:bhoomichauhan333@gmail.com" class="contact-icon-card">
+      <i class="fa-solid fa-envelope"></i>
+      <span>Email</span>
+    </a>
+
+    <a href="https://github.com/bhoomi018" target="_blank" class="contact-icon-card">
+      <i class="fa-brands fa-github"></i>
+      <span>GitHub</span>
+    </a>
+
+    <a href="https://www.linkedin.com/in/bhoomi-chauhan-b92884224/" target="_blank" class="contact-icon-card">
+      <i class="fa-brands fa-linkedin"></i>
+      <span>LinkedIn</span>
+    </a>
+  </div>
+</section>
+
+<script>
+  const items = document.querySelectorAll(".reveal");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        entry.target.style.transitionDelay = `${index * 80}ms`;
+        entry.target.classList.add("active");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  items.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
