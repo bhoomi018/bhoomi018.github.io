@@ -11,6 +11,25 @@ body {
   line-height: 1.7;
 }
 
+/* Sunlight glow */
+.sun-glow {
+  position: fixed;
+  top: -120px;
+  right: -120px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,165,0,0.25), transparent 70%);
+  filter: blur(80px);
+  z-index: -1;
+  animation: sunMove 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes sunMove {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-20px, 20px); }
+}
+
 /* HERO */
 .hero {
   max-width: 1100px;
@@ -21,7 +40,6 @@ body {
 .hero h1 {
   font-size: 48px;
   font-weight: 700;
-  margin-bottom: 8px;
 }
 
 .role {
@@ -32,7 +50,6 @@ body {
 
 .summary {
   max-width: 700px;
-  font-size: 16px;
   color: #475569;
 }
 
@@ -47,19 +64,6 @@ body {
   box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
-.section h2 {
-  font-size: 24px;
-  margin-bottom: 16px;
-}
-
-/* CARD */
-.card {
-  padding: 25px;
-  border-radius: 14px;
-  border: 1px solid #e5e7eb;
-  background: #ffffff;
-}
-
 /* PROJECT */
 .project {
   padding: 22px;
@@ -72,38 +76,8 @@ body {
 
 .project:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
-}
-
-.tech {
-  font-size: 13px;
-  color: #64748b;
-}
-
-.project-link {
-  display: inline-block;
-  margin-top: 8px;
-  color: #0ea5a4;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.project-link:hover {
-  text-decoration: underline;
-}
-
-/* SKILLS */
-.skills {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-}
-
-.skills div {
-  padding: 16px;
-  border-radius: 12px;
-  border: 1px solid #e5e7eb;
-  background: #ffffff;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08),
+              0 0 20px rgba(255,165,0,0.15);
 }
 
 /* CONTACT */
@@ -111,7 +85,6 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
-  margin-top: 20px;
 }
 
 .contact-icon-card {
@@ -121,47 +94,10 @@ body {
   background: #f0f9ff;
   color: #0ea5a4;
   text-decoration: none;
-  font-weight: 500;
-  transition: all 0.25s ease;
-}
-
-.contact-icon-card i {
-  font-size: 22px;
-  margin-bottom: 6px;
-}
-
-.contact-icon-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(56,189,248,0.2);
-}
-
-/* ANIMATION */
-.reveal {
-  opacity: 0;
-  transform: translateY(25px);
-  transition: all 0.6s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: none;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 32px;
-  }
-
-  .skills {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section {
-    padding: 30px 20px;
-  }
+  .hero h1 { font-size: 32px; }
+  .contact-grid { grid-template-columns: 1fr; }
 }
