@@ -5,46 +5,21 @@
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
-  background: #f8fafc;
-  color: #0f172a;
+  background: #0b1220;
+  color: #e2e8f0;
+  line-height: 1.7;
   overflow-x: hidden;
 }
 
-/* BACKGROUND BLOBS */
-.bg-blob {
+/* Animated Background */
+.gradient-bg {
   position: fixed;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  filter: blur(100px);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 30%, #0ea5a4 0%, transparent 40%),
+              radial-gradient(circle at 80% 70%, #6366f1 0%, transparent 40%);
+  opacity: 0.2;
   z-index: -1;
-  opacity: 0.6;
-}
-
-.blob1 {
-  background: #38bdf8;
-  top: 10%;
-  left: -100px;
-  animation: float 8s infinite ease-in-out;
-}
-
-.blob2 {
-  background: #0ea5a4;
-  bottom: 10%;
-  right: -100px;
-  animation: float 10s infinite ease-in-out;
-}
-
-.blob3 {
-  background: #7dd3fc;
-  top: 50%;
-  left: 50%;
-  animation: float 12s infinite ease-in-out;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-40px); }
 }
 
 /* HERO */
@@ -57,33 +32,32 @@ body {
 .hero h1 {
   font-size: 52px;
   font-weight: 800;
-  background: linear-gradient(to right, #0ea5a4, #38bdf8);
+  background: linear-gradient(90deg, #38bdf8, #6366f1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .role {
-  color: #0ea5a4;
-  font-weight: 600;
   margin-top: 10px;
+  color: #38bdf8;
+  font-weight: 600;
 }
 
 .summary {
+  color: #94a3b8;
   max-width: 700px;
-  color: #475569;
 }
 
 /* SECTION */
 .section {
   max-width: 1100px;
   margin: 60px auto;
-  padding: 50px;
-  border-radius: 24px;
-  background: rgba(255,255,255,0.6);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255,255,255,0.3);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
-  transition: 0.4s;
+  padding: 45px;
+  border-radius: 20px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  transition: 0.3s;
 }
 
 .section:hover {
@@ -92,21 +66,20 @@ body {
 
 /* CARD */
 .card {
-  padding: 30px;
-  border-radius: 18px;
-  background: rgba(255,255,255,0.8);
-  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 16px;
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(255,255,255,0.05);
 }
 
 /* PROJECT */
 .project {
-  padding: 28px;
-  border-radius: 18px;
+  padding: 25px;
+  border-radius: 16px;
   margin-bottom: 25px;
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(12px);
-  transition: all 0.4s ease;
-  border: 1px solid transparent;
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: 0.3s;
   position: relative;
 }
 
@@ -114,19 +87,23 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 18px;
+  border-radius: 16px;
   padding: 1px;
-  background: linear-gradient(120deg, #0ea5a4, #38bdf8);
+  background: linear-gradient(120deg, #38bdf8, #6366f1);
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
-  mask-composite: exclude;
 }
 
 .project:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(99,102,241,0.2);
+}
+
+.tech {
+  color: #94a3b8;
+  font-size: 13px;
 }
 
 /* SKILLS */
@@ -137,36 +114,36 @@ body {
 }
 
 .skills div {
-  padding: 20px;
-  border-radius: 16px;
-  background: rgba(255,255,255,0.8);
-  backdrop-filter: blur(10px);
+  padding: 18px;
+  border-radius: 14px;
+  background: rgba(30, 41, 59, 0.6);
   transition: 0.3s;
 }
 
 .skills div:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 15px 40px rgba(99,102,241,0.2);
 }
 
 /* CONTACT */
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 18px;
 }
 
 .contact-icon-card {
-  padding: 26px;
-  border-radius: 18px;
+  padding: 22px;
+  border-radius: 14px;
   text-align: center;
-  background: linear-gradient(135deg, #f0f9ff, #ffffff);
-  transition: 0.4s;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: #38bdf8;
+  transition: 0.3s;
 }
 
 .contact-icon-card:hover {
-  transform: scale(1.05) translateY(-6px);
-  box-shadow: 0 20px 50px rgba(56,189,248,0.3);
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(56,189,248,0.3);
 }
 
 /* ANIMATION */
@@ -193,6 +170,6 @@ body {
   }
 
   .section {
-    padding: 30px;
+    padding: 25px;
   }
 }
